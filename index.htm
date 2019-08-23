@@ -28,8 +28,8 @@
         }
         </style>
 <body>
-<div>
-    <iframe id="heatmapIframe" width="320" height="480" sandbox="allow-same-origin allow-forms allow-scripts" seamless src="//thegioidiengiai.com"></iframe>
+<div style="--aspect-ratio: 16/9;">
+    <iframe id="heatmapIframe" width="375" height="812" sandbox="allow-same-origin allow-forms allow-scripts" seamless src="https://thegioidiengiai.com"></iframe>
     </div>
 <script type="text/javascript">
 var phoneUA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1';
@@ -41,8 +41,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 function setUserAgent(window, userAgent) {
-      console.log(userAgent);
-      // Works on Firefox, Chrome, Opera and IE9+
+       // Works on Firefox, Chrome, Opera and IE9+
       if (navigator.__defineGetter__) {
           navigator.__defineGetter__('userAgent', function () {
               return userAgent;
