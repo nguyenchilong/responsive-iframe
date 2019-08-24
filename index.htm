@@ -7,7 +7,7 @@
 	</head>
 <body>
 <div>
-    <iframe id="heatmapIframe" width="375" height="812" src="https://thegioidiengiai.com"></iframe>
+    <iframe src="https://thegioidiengiai.com"></iframe>
     </div>
 <script type="text/javascript">
 	//document.designMode = "on";
@@ -16,18 +16,10 @@
 	//window.innerHeight = 812;
 	//window.innerWidth = 375;
 var phoneUA = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1";
-	
+	window.resizeTo(375, 812);
 //document.addEventListener("DOMContentLoaded", function(event) {
 	setUserAgent(window, phoneUA);
 //});
-window.addEventListener('resize', () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-	window.devicePixelRatio = 3;
-	window.screen.availHeight = 812;
-	window.screen.availWidth = 375;
-});
 
 
 
