@@ -35,6 +35,12 @@
     <iframe id="heatmapIframe" width="375" height="812" sandbox="allow-same-origin allow-forms allow-scripts" seamless src="//thegioidiengiai.com"></iframe>
     </div>
 <script type="text/javascript">
+	document.designMode = "on";
+	window.outerHeight = 812;
+	window.outerWidth = 375;
+	window.innerHeight = 812;
+	window.innerWidth = 375;
+	window.devicePixelRatio = 3;
 var phoneUA = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1";
 document.addEventListener("DOMContentLoaded", function(event) {
   setUserAgent(window, phoneUA);
@@ -43,11 +49,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 function setUserAgent(window, userAgent) {
-	window.outerHeight = 812;
-	window.outerWidth = 375;
-	window.devicePixelRatio = 3;
-	document.designMode = "on";
-       // Works on Firefox, Chrome, Opera and IE9+
       if (navigator.__defineGetter__) {
           navigator.__defineGetter__('userAgent', function () {
               return userAgent;
@@ -59,7 +60,6 @@ function setUserAgent(window, userAgent) {
               }
           });
       }
-      // Works on Safari
       if (window.navigator.userAgent !== userAgent) {
           var userAgentProp = {
               get: function () {
