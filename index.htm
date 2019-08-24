@@ -10,18 +10,18 @@
     <iframe id="heatmapIframe" width="375" height="812" src="//thegioidiengiai.com"></iframe>
     </div>
 <script type="text/javascript">
-	document.designMode = "on";
+	//document.designMode = "on";
 	//window.outerHeight = 812;
 	//window.outerWidth = 375;
 	//window.innerHeight = 812;
 	//window.innerWidth = 375;
+var phoneUA = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1";
+document.addEventListener("DOMContentLoaded", function(event) {
+	setUserAgent(window, phoneUA);
 	window.devicePixelRatio = 3;
 	window.screen.availHeight = 812;
 	window.screen.availWidth = 375;
-var phoneUA = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1";
-//document.addEventListener("DOMContentLoaded", function(event) {
-  setUserAgent(window, phoneUA);
-//});
+});
 
 
 
