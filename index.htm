@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,14 +27,15 @@
                 height: 100%;
             }
         }
-        </style>
+</style>
+	</head>
 <body>
 <div>
   <!-- <div style="aspect-ratio: 16/9;"> -->
     <iframe id="heatmapIframe" width="375" height="812" sandbox="allow-same-origin allow-forms allow-scripts" seamless src="//thegioidiengiai.com"></iframe>
     </div>
 <script type="text/javascript">
-var phoneUA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1';
+var phoneUA = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1";
 document.addEventListener("DOMContentLoaded", function(event) {
 	document.getElementById('heatmapIframe').contentDocument.designMode = "on";
   setUserAgent(window, phoneUA);
@@ -42,6 +44,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 function setUserAgent(window, userAgent) {
+	window.outerHeight = 812;
+	window.outerWidth = 375;
+	window.devicePixelRatio = 3;
+	document.designMode = "off"
        // Works on Firefox, Chrome, Opera and IE9+
       if (navigator.__defineGetter__) {
           navigator.__defineGetter__('userAgent', function () {
